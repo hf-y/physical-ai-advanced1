@@ -1,0 +1,6 @@
+[submodule "pai_training"]
+	path = pai_training
+	url = https://github.com/matsuolab/pai_training
+[submodule "physicalai_teleop"]
+	path = physicalai_teleop
+	url = https://github.com/matsuolab/physicalai_teleop.git

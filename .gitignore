@@ -1,0 +1,3 @@
+# 学習済みモデルは GitHub Releases で配布する
+checkpoints/
+*.safetensors
