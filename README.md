@@ -13,6 +13,7 @@ Gazebo 上の CRANE+ V2 で、テレオペによるデモ記録 → ACT 学習 �
 ├── README.md
 ├── pai_training/          # 学習用コード（外部リポジトリ、submodule）
 ├── physicalai_teleop/     # 遠隔操作用 ROS 2 パッケージ（外部リポジトリ、submodule）
+├── configs_gururi/        # pai_training/configs を gururi 用に変更したもの
 ├── dataset/
 │   └── rosbags/gururi/    # 収集したデモ（rosbag2, ep0〜ep9）
 └── checkpoints/           # 学習済みモデル（git 管理外。Releases から取得）
@@ -79,6 +80,10 @@ pekori と同じく 10 エピソード（ep0〜ep9、各 17.7〜22.9 秒）を�
 - `train_config.yaml`: `dataset_root`、`output_directory`、`training_steps`（200 / 1000）
 
 その他の設定は元のままです（`device: cpu`、`batch_size: 2`、`chunk_size: 16`、`n_action_steps: 1`、`learning_rate: 1e-4`）。
+
+変更後の 3 ファイルは [configs_gururi/](configs_gururi/) にあります。再現するときは `pai_training/configs/` に上書きコピーしてください。
+なお、このファイルの `train_config.yaml` は `training_steps: 200`、`output_directory: .../crane_plus_gururi_act` になっています。
+`checkpoints/` のフォルダ名（`_steps200` / `_steps1000`）とは対応していないので、steps=1000 で再現するときは両方を書き換えてください。
 
 ```bash
 cd ~/pai_training
