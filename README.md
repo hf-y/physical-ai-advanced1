@@ -32,7 +32,9 @@ Gazebo 上の CRANE+ V2 で、テレオペによるデモ記録 → ACT 学習 �
 ### 学習済みモデル
 
 `model.safetensors`（各約 153MB）は GitHub のファイルサイズ上限を超えるため、
-[Releases](../../releases) に添付しています。ダウンロードして次の場所に置いてください。
+[Releases](../../releases) に zip で添付しています
+（`crane_plus_gururi_act_steps200.zip`、`crane_plus_gururi_act_steps1000.zip`）。
+`checkpoints/train/` に展開すると、次の構成になります。
 
 ```
 checkpoints/train/crane_plus_gururi_act_steps200/{config.json, model.safetensors}
